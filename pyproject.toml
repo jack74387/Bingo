@@ -1,0 +1,77 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zmq-bingo-game"
+version = "1.0.0"
+description = "A multiplayer Bingo game implemented with ZeroMQ"
+readme = "README.md"
+authors = [
+    {name = "Student Assignment", email = "student@example.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Education",
+    "Topic :: Games/Entertainment :: Board Games",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+]
+keywords = ["bingo", "game", "multiplayer", "zmq", "zeromq", "network"]
+dependencies = [
+    "pyzmq>=25.0.0",
+    "colorama>=0.4.6",
+]
+requires-python = ">=3.6"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=22.0.0",
+    "flake8>=4.0.0",
+]
+
+[project.scripts]
+bingo-server = "zmq_bingo:main"
+bingo-client = "zmq_bingo:main"
+
+[project.urls]
+Homepage = "https://github.com/yourusername/zmq-bingo-game"
+"Bug Reports" = "https://github.com/yourusername/zmq-bingo-game/issues"
+Source = "https://github.com/yourusername/zmq-bingo-game"
+
+[tool.black]
+line-length = 88
+target-version = ['py36']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503"]
+exclude = [
+    ".git",
+    "__pycache__",
+    "build",
+    "dist",
+    ".eggs",
+    "*.egg-info",
+]

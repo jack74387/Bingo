@@ -1,0 +1,14 @@
+# ZMQ賓果遊戲依賴套件
+# ZMQ Bingo Game Dependencies
+
+# 核心依賴 / Core Dependencies
+pyzmq>=25.0.0
+
+# 可選依賴 / Optional Dependencies
+# 用於更好的終端顯示效果
+colorama>=0.4.6
+
+# 開發依賴 / Development Dependencies (可選)
+# pytest>=7.0.0  # 用於單元測試
+# black>=22.0.0   # 程式碼格式化
+# flake8>=4.0.0   # 程式碼風格檢查

@@ -1,0 +1,60 @@
+{
+  "server": {
+    "default_interface": "localhost",
+    "default_port": 1060,
+    "game_settings": {
+      "waiting_timeout": 20,
+      "number_draw_interval": 2,
+      "min_lines_to_win": 5
+    },
+    "network": {
+      "req_rep_port_offset": 0,
+      "pub_sub_port_offset": 1,
+      "socket_timeout_ms": 2000
+    }
+  },
+  "client": {
+    "default_server": "localhost",
+    "default_port": 1060,
+    "display": {
+      "use_colors": true,
+      "marked_number_color": "magenta",
+      "board_size": 5
+    },
+    "game": {
+      "auto_reconnect": false,
+      "reconnect_attempts": 3,
+      "reconnect_delay": 5
+    }
+  },
+  "logging": {
+    "enabled": true,
+    "level": "INFO",
+    "file": "bingo_game.log",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  },
+  "game_rules": {
+    "board_size": 5,
+    "number_range": {
+      "min": 1,
+      "max": 25
+    },
+    "win_conditions": {
+      "required_lines": 5,
+      "line_types": ["horizontal", "vertical", "diagonal"]
+    }
+  },
+  "advanced": {
+    "zmq_context_options": {
+      "io_threads": 1,
+      "max_sockets": 1024
+    },
+    "performance": {
+      "high_water_mark": 1000,
+      "tcp_keepalive": true,
+      "tcp_keepalive_idle": 300,
+      "tcp_keepalive_interval": 300,
+      "tcp_keepalive_count": 3
+    }
+  }
+}

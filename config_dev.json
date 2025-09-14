@@ -1,0 +1,47 @@
+{
+  "server": {
+    "default_interface": "localhost",
+    "default_port": 8080,
+    "game_settings": {
+      "waiting_timeout": 10,
+      "number_draw_interval": 1,
+      "min_lines_to_win": 3
+    },
+    "network": {
+      "req_rep_port_offset": 0,
+      "pub_sub_port_offset": 1,
+      "socket_timeout_ms": 1000
+    }
+  },
+  "client": {
+    "default_server": "localhost",
+    "default_port": 8080,
+    "display": {
+      "use_colors": true,
+      "marked_number_color": "green",
+      "board_size": 5
+    },
+    "game": {
+      "auto_reconnect": true,
+      "reconnect_attempts": 5,
+      "reconnect_delay": 3
+    }
+  },
+  "logging": {
+    "enabled": true,
+    "level": "DEBUG",
+    "file": "bingo_game_dev.log",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  },
+  "game_rules": {
+    "board_size": 5,
+    "number_range": {
+      "min": 1,
+      "max": 25
+    },
+    "win_conditions": {
+      "required_lines": 3,
+      "line_types": ["horizontal", "vertical", "diagonal"]
+    }
+  }
+}
