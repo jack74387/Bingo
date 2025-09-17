@@ -24,7 +24,7 @@
 
 ### 安裝
 
-1. **克隆專案**
+1. **複製專案**
    ```bash
    git clone https://github.com/jack74387/Bingo.git
    cd bingo
